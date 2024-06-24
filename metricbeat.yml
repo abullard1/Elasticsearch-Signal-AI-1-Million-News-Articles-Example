@@ -1,0 +1,35 @@
+metricbeat.config.modules:
+  path: ${path.config}/modules.d/*.yml
+  reload.enabled: false
+
+output.elasticsearch:
+  hosts: ["http://elasticsearch1:9200", "http://elasticsearch2:9200", "http://elasticsearch3:9200", "http://elasticsearch4:9200"]
+  ssl.enabled: false
+
+setup.kibana:
+  host: "kibana:5601"
+  ssl.enabled: false
+
+processors:
+  - add_cloud_metadata: ~
+  - add_docker_metadata: ~
+
+metricbeat.modules:
+  - module: elasticsearch
+    metricsets:
+      - node
+      - node_stats
+      - index
+      - index_recovery
+      - index_summary
+      - shard
+    period: 10s
+    hosts: ["http://elasticsearch1:9200", "http://elasticsearch2:9200", "http://elasticsearch3:9200", "http://elasticsearch4:9200"]
+    ssl.enabled: false
+
+  - module: kibana
+    metricsets:
+      - stats
+    period: 10s
+    hosts: ["http://kibana:5601"]
+    ssl.enabled: false
