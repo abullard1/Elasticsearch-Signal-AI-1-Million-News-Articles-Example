@@ -39,9 +39,9 @@ This repository contains a Jupyter notebook showcasing how to **index and search
 ### Verification
 
 Verify the setup by accessing the following:
-- Elasticsearch Page: [https://localhost:9200/](https://localhost:9200/)
-- Kibana Dashboard: [http://localhost:5601/](http://localhost:5601/)
+- **Elasticsearch Page:** [https://localhost:9200/](https://localhost:9200/)
+- **Kibana Dashboard:** [http://localhost:5601/](http://localhost:5601/)
 
 ## Using the Jupyter Notebook
 
-Once Elasticsearch, Kibana, and Metricbeat are up and running, interact with them using the provided Jupyter Notebook by executing the cells. Adjust parameters as needed based on your hardware and intent.
+Once **Elasticsearch**, **Kibana**, and **Metricbeat** are up and running, interact with them using the provided Jupyter Notebook by executing the cells. Adjust parameters as needed based on your hardware and intent.
