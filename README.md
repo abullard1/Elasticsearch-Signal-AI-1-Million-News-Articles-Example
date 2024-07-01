@@ -6,8 +6,8 @@ This repository contains a Jupyter notebook showcasing how to **index and search
 ## Setup Instructions
 
 ### Prerequisites
-- Docker
-- Docker Compose
+- [Docker](https://www.docker.com/products/docker-desktop/)
+- [Docker Compose](https://docs.docker.com/compose/install/linux/) *(Included in Docker Desktop)*
 
 ### Installation Using Docker Compose
 
@@ -34,10 +34,7 @@ This repository contains a Jupyter notebook showcasing how to **index and search
    docker pull ghcr.io/abullard1/elasticsearch-signal-ai-1-million-news-articles-example-docker-container:latest
    ```
 
-3. Run the Docker container:
-   ```
-   docker run <commands_to_run_container>
-   ```
+3. Run the Docker container via Docker Desktop or CLI
 
 ### Verification
 
